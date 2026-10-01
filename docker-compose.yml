@@ -1,0 +1,9 @@
+services:
+  worm:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: worm
+      POSTGRES_PASSWORD: worm
+      POSTGRES_DB: worm
+    ports:
+      - "5432:5432"
