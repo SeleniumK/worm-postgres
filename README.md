@@ -22,15 +22,15 @@ Then, inside `psql`:
 \i 00-the-3am-table.sql   -- run a file
 ```
 
-That is all the Postgres operations knowledge this talk requires.
+That is all the Postgres operations knowledge this demo requires.
 
 ## The files
 
 Run them in order, or jump to whichever number you are interested in exploring
 
-Files ending in `a` hold the deliberate failures. Paste those one statement at
-a time rather than running them with `\i` — each error is meant to land on its
-own. `01-break-it.sql` is the same: never `\i` it.
+Files with an `a` after the number hold the deliberate failures. Paste those one statement at
+a time rather than running them with `\i` — each error is meant to be examined on it's own.
+`01-break-it.sql` is the same: never `\i` it.
 
 | File | What it is |
 |---|---|
