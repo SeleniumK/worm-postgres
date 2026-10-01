@@ -2,16 +2,13 @@
 
 Postgres Summit US 2026 · Selena Flannery
 
-**Pull the image before you get to the conference.** Conference wifi plus a
-Postgres image is a two minute wait you do not want.
+Slides: https://docs.google.com/presentation/d/176fIpRwKHMvCJYmk0DqCgd4b77g00Prf/edit?usp=sharing
 
-```
-docker pull postgres:18
-```
 
 ## Running it
 
 ```
+docker pull postgres:18
 docker compose up -d
 psql postgresql://worm:worm@localhost:5432/worm
 ```
@@ -29,7 +26,7 @@ That is all the Postgres operations knowledge this talk requires.
 
 ## The files
 
-Run them in order, or jump to whichever number matches where the talk is.
+Run them in order, or jump to whichever number you are interested in exploring
 
 Files ending in `a` hold the deliberate failures. Paste those one statement at
 a time rather than running them with `\i` — each error is meant to land on its
