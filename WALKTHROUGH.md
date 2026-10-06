@@ -19,7 +19,7 @@ Every step runs a numbered file from this repo, in order. Where it helps, I've
 put the output you should see underneath, in psql's default format. Your column
 widths may be a little different.
 
-You don't need to know any Postgres to follow along. You do need to be a worm.
+You don't need to know any Postgres to follow along. You would benefit from being a worm.
 
 ---
 
@@ -36,7 +36,7 @@ But you know three things:
 
 That last one is the only thing you're actually sure of. You don't know what he
 did. You don't know when. You definitely couldn't explain it to another worm if
-they asked. But you're certain, and you intend to keep acting on it.
+they asked. But you're certain, and it matters to you.
 
 That's data. Certainty with no structure. Facts you can't defend. Questions you
 can't answer about things you already know.
@@ -166,7 +166,7 @@ CREATE TABLE everything_i_remember (
 ```
 
 Take a minute and read it before moving on. Finding the problems yourself is
-more fun than having me point at them.
+more fun than having me point them out.
 
 (The first time you run the file, you'll see `NOTICE: table
 "everything_i_remember" does not exist, skipping`. That's harmless: the file
@@ -197,10 +197,7 @@ Indexes:
     "everything_i_remember_pkey" PRIMARY KEY, btree (id)
 ```
 
-(I've trimmed the Collation column; it's empty for every row.)
-
-Alright, now let's get into those columns, and see where things get even more
-broken.
+Alright, now let's get into those columns, and see where things get more broken.
 
 ---
 
@@ -223,9 +220,8 @@ ERROR:  value too long for type character varying(50)
 ```
 
 That's Austin, Duke of the Long Dark Where I Do Not Go Anymore. He's fifty-five
-characters. The column is fifty. I did not pick fifty for any reason. I picked
-fifty because it was there. Austin has been erased from the record on a
-technicality.
+characters. The column is fifty. I did not pick fifty for any particular reason. I picked
+fifty because it was there. Austin has been erased from the record on an unfortunate technicality.
 
 ### Two: the dirt ratings are lying to you
 
@@ -272,8 +268,7 @@ ORDER BY id;
 `real` is four bytes. 4.1 is not a number four bytes can hold, so Postgres
 stored the closest one it had. And it never told me: it prints the shortest
 number that reads back as the same value (that's been the behavior since
-Postgres 12), so it showed me 4.1. It was being polite. That politeness is the
-whole problem. You won't notice until you do math, and by then it's in a
+Postgres 12), so it showed me 4.1. It was just being polite. Politeness is a problem here -- You won't notice until you do math, and by then it's in a
 report with your name on it.
 
 I rated that dirt 4.1. The database has 4.099999904632568. Nobody has ever felt
