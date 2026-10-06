@@ -9,7 +9,7 @@ Postgres Summit US 2026 · Selena Flannery
 **Weren't at the talk?** [WALKTHROUGH.md](WALKTHROUGH.md) is the whole thing
 written down, with the output you should see at each step.
 
-Slides: https://docs.google.com/presentation/d/176fIpRwKHMvCJYmk0DqCgd4b77g00Prf/edit?usp=sharing
+Slides: [slides.pdf](slides.pdf)
 
 
 ## Running it
@@ -66,3 +66,11 @@ docker compose down -v && docker compose up -d
 ```
 
 The worm gets to start over. This is the only advantage of amnesia.
+
+## License
+
+The SQL files and Docker setup are released under the [MIT License](LICENSE),
+so you're welcome to use them in your own workshops and teaching.
+
+The slides and the walkthrough are © 2026 Selena Flannery, shared under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse them with credit.
